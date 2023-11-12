@@ -5,7 +5,8 @@ export default function Editproduct({ product }) {
 
     const [productname, setproductname] = useState(product?.productName);
     const [imageUrl, setimageUrl] = useState(product?.productImage);
-    console.log(product);
+    const id = product?._id
+    console.log(id);
     const handleSubmit = async (event) => {
         event.preventDefault();
 
@@ -15,15 +16,15 @@ export default function Editproduct({ product }) {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                _id: product._id,
+                _id: id,
                 productName: productname,
                 productImage: imageUrl
             })
         })
         if (res.status === 200) {
-            alert('success')
+            alert('success');
         } else {
-            alert('failed')
+            alert('failed');
         }
     }
 
