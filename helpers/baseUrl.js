@@ -1,0 +1,2 @@
+const baseUrl = process.env.NODE_ENV === 'production' ? "https://containerapp.vercel.app": "http://localhost:3000"
+export default baseUrl
