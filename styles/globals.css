@@ -320,6 +320,12 @@ input {
   align-items: center;
   gap: 30px ;
 }
+
+.btn-product{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
 /* Media Queries */
 
 /* Mobile Devices - Phones/Tablets */

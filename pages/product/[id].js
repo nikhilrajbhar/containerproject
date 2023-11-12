@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import baseUrl from "../../helpers/baseUrl";
+import Link from 'next/link';
 
 export default function Editproduct({ product }) {
 
@@ -43,7 +44,12 @@ export default function Editproduct({ product }) {
                         value={imageUrl} onChange={(e) => setimageUrl(e.target.value)} />
                 </div>
                 <br />
+                <div className='btn-product'>
                 <button type="submit" className="btn btn-primary">Update</button>
+                <Link href="/productdisplay">
+                <button type="submit" className="btn btn-primary">Go to Products page</button>
+                </Link>
+                </div>
             </form>
         </>
     )   
